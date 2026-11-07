@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "Angel Lounges Scanner",
+    "slug": "blw-scanner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "blwscanner",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#14110e",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.angellounges.scanner",
+      "infoPlist": {
+        "NSCameraUsageDescription": "The camera scans partners' lounge passes and pairing codes."
+      }
+    },
+    "android": {
+      "package": "com.angellounges.scanner",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#14110e"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["android.permission.CAMERA"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "resizeMode": "contain",
+          "backgroundColor": "#14110e"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "The camera scans partners' lounge passes and pairing codes.",
+          "recordAudioAndroid": false
+        }
+      ],
+      "expo-sqlite",
+      "expo-secure-store",
+      "expo-font",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ],
+    "updates": {
+      "enabled": false
+    },
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
